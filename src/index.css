@@ -1,13 +1,231 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*---General Styles-----*/
+body{
+    background: #000;
+    font-family: 'Mountains of Christmas', cursive;
+    color:#c8972b;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:20px auto;
+}
+label{ margin-bottom:0px;}
+.red{color:#ff0012;}
+
+button.btn.start{
+    display: block;
+    background-color:#ff0012;
+    color:   #c8972b;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.square{
+    border-left: 3px solid #c8972b;
+    border-bottom: 3px solid #c8972b;
+    width: 30%;
+    min-height: 168px;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square:first-child {
+    border-left: none;
+}
+.square:nth-child(4) {
+    border-left: none;
+}
+.square:nth-child(7) {
+    border-left: none;
+    border-bottom: none;
+}
+.square:nth-child(8) {
+    border-bottom: none;
+}
+.square:nth-child(9) {
+    border-bottom: none;
+}
+
+
+
+
+
+.colorGreen{color:#0f8A57}
+.vertically{
+    position: absolute;
+    width: 80%;
+    top: 5%;
+    left: 10%;
+}
+.d-flex.justify-content-center.button { margin: 2% auto;}
+
+/*Img*/
+
+
+/*---Modal-----*/
+
+.modal-content{background: #0f8A57;}
+.modal-header{border-bottom: none;  
+    margin: 0;
+    padding: 0px 15px;}
+h3.font-weight-bold.text-center {
+    margin-bottom: 25px;
+}
+.modal-footer{border-top: none;margin-bottom:25px;}
+
+
+
+/*----Cards---*/
+.card{
+    background-color: wheat;
+    border:none;
+    -webkit-box-shadow: inset -18px 10px 44px 0px rgba(204,35,30,1);
+    -moz-box-shadow: inset -18px 10px 44px 0px rgba(204,35,30,1);
+    box-shadow: inset -18px 10px 44px 0px rgba(204,35,30,1);
+}
+.imgCard{ width: 70%; text-align: center; margin: 0 auto; padding: 5% 0;}
+
+
+.btn-secondary{ background:#CC231E; color:#c8972b;font-size:20px; font-weight: bold;border:none; width:200px; padding:10px}
+.btn.playAgain{background:#c8972b; color:#CC231E; font-weight: bold;border:none; width:400px; padding:10px; opacity:1; transition: all 2s ease; border:1px solid #CC231E;}
+.btn-secondary:hover{ background:#c8972b; color:#CC231E; font-weight: bold; border:none; transition: all 0.8s ease;}
+.btn.playAgain:disabled {background:#CC231E;opacity: 0.4; color:#c8972b; font-weight: bold;border:none; width:200px; padding:10px; transition: all 2s ease;}
+
+
+
+/* Choose Player*/
+
+.icoPLayer{ width:20%;}
+.text-center h2 {
+    height: 80px;
+    transition: all 0.8s ease;
+}
+form{
+    height: 85px;
+    transition: all 0.8s ease;
+}
+/*  // Choose Player*/
+
+
+
+
+/*--------Media Query-----*/
+
+@media (min-width: 769px) {
+    .modal-dialog{ max-width:50%;}
+
+}
+
+
+
+
+/*-----background------*/
+
+.lightrope {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    margin: -15px 0 0 0;
+    padding: 0;
+    pointer-events: none;
+    width: 100%;
+}
+.lightrope li {
+    position: relative;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 12px;
+    height: 28px;
+    border-radius: 50%;
+    margin: 20px;
+    display: inline-block;
+    background: rgba(0, 247, 165, 1);
+    box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 1);
+    animation-name: flash-1;
+    animation-duration: 2s;
+}
+.lightrope li:nth-child(2n+1) {
+    background: rgba(0, 255, 255, 1);
+    box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.5);
+    animation-name: flash-2;
+    animation-duration: 0.4s;
+}
+.lightrope li:nth-child(4n+2) {
+    background: rgba(247, 0, 148, 1);
+    box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 1);
+    animation-name: flash-3;
+    animation-duration: 1.1s;
+}
+.lightrope li:nth-child(odd) {
+    animation-duration: 1.8s;
+}
+.lightrope li:nth-child(3n+1) {
+    animation-duration: 1.4s;
+}
+.lightrope li:before {
+    content: "";
+    position: absolute;
+    background: #222;
+    width: 10px;
+    height: 9.3333333333px;
+    border-radius: 3px;
+    top: -4.6666666667px;
+    left: 1px;
+}
+.lightrope li:after {
+    content: "";
+    top: -14px;
+    left: 9px;
+    position: absolute;
+    width: 52px;
+    height: 18.6666666667px;
+    border-bottom: solid #222 2px;
+    border-radius: 50%;
+}
+.lightrope li:last-child:after {
+    content: none;
+}
+.lightrope li:first-child {
+    margin-left: -40px;
+}
+@keyframes flash-1 {
+    0%, 100% {
+        background: rgba(0, 247, 165, 1);
+        box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 1);
+   }
+    50% {
+        background: rgba(0, 247, 165, 0.4);
+        box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 247, 165, 0.2);
+   }
+}
+@keyframes flash-2 {
+    0%, 100% {
+        background: rgba(0, 255, 255, 1);
+        box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 1);
+   }
+    50% {
+        background: rgba(0, 255, 255, 0.4);
+        box-shadow: 0px 4.6666666667px 24px 3px rgba(0, 255, 255, 0.2);
+   }
+}
+@keyframes flash-3 {
+    0%, 100% {
+        background: rgba(247, 0, 148, 1);
+        box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 1);
+   }
+    50% {
+        background: rgba(247, 0, 148, 0.4);
+        box-shadow: 0px 4.6666666667px 24px 3px rgba(247, 0, 148, 0.2);
+   }
 }
