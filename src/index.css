@@ -120,6 +120,11 @@ form{
     .modal-dialog{ max-width:50%;}
 
 }
+@media (max-width: 768px){
+    .square{min-height:100px;}
+    img.logImg{width: 70%;}
+    .wrapper{margin:45px auto;}
+}
 
 
 
